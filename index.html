@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Enter First Number</p>
+        <input id="first-number" type="number">
+    </div>
+
+    <div>
+        <p>Second Number</p>
+        <input id="second-number" type="number">
+    </div>
+
+    <div>
+        <p>SUM</p>
+        <input id="sum" type="number">
+    </div>
+
+    <button onclick="cb()">Add</button>
+    <script>
+        const sum= document.getElementById('sum');
+        const first= document.getElementById('first-number')
+        const second= document.getElementById('second-number')
+        function cb(){
+            
+            const a=parseInt(first.value)
+            const b=parseInt(second.value)
+
+            if(isNaN(a) || isNaN(b)){
+                alert("Wrong Input")
+                return;
+            }
+            sum.value= a+b
+        }
+    </script>
+
+</body>
+</html>
